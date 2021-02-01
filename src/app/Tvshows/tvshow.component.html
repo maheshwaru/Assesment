@@ -1,0 +1,20 @@
+<div class="row headercls">
+  <input type="text" name="search" class="searchcls" [(ngModel)]="searchText" placeholder="Search for shows">
+  <select [(ngModel)]="defaultSelected" class="drpdown" (ngModelChange)="onChange($event)" >
+    <option value="" disabled selected id="option">Select your option</option>
+    <option *ngFor="let i of genres" [ngValue]="i"> {{i}} </option>
+  </select>
+</div>
+
+
+<div class="row tileclass">
+<div class="col-xs-3 col-sm-3 col-md-3" *ngFor="let item of ratingArray | filter:searchText">
+     <div class="card" (click)="navigateToDetail(item.id)">
+          <img [src]="item.img" alt="Avatar" class="genreimg">
+          <div class="container">
+            <h4><b>{{item.name}}</b></h4> 
+            <p>{{item.rating}}</p> 
+          </div>
+     </div>
+</div>
+</div>

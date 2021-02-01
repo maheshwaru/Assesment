@@ -1,0 +1,45 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  height: 95%;
+  cursor: pointer !important;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.tileclass{
+  padding-top: 94px;
+  margin-left: 95px;
+}
+
+.drpdown{
+  margin-left: 80px;
+}
+
+
+
+div.scroll{
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.headercls{
+  justify-content: center;
+  padding-top: 19px;
+}
+
+.searchcls{
+  width: 25%;
+}
+
+.genreimg{
+  width:100%
+}
+
