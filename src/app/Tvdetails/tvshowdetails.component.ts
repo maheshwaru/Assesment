@@ -24,7 +24,6 @@ export class tvshowDetailsComponent implements OnInit {
             this.name = data[0].name;
             this.summary = data[0].summary.replace(/(<([^>]+)>)/ig, '');
             this.img = data[0].image.medium;
-            console.log(data)
         })
     }
 }

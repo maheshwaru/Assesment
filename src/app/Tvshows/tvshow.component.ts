@@ -50,15 +50,10 @@ export class tvshowComponent implements OnInit {
   ngOnInit() {
     /**getting all the tvshows by hitting service */
     this._showService.tvshowsGet().subscribe((res) => {
-      console.log("service of tvshows fetched", res);
       this.resultArray = res;
-      console.log("this.resultArray.length", this.resultArray);
       for (let i = 0; i < this.resultArray.length; i++) {
         const id = this.resultArray[i].id;
         const img = this.resultArray[i].image.medium;
-        console.log("id", id);
-        console.log("img", img);
-        console.log('rating');
         this.ratingArray.push({
           'id': this.resultArray[i].id,
           'rating': this.resultArray[i].rating.average,
@@ -69,15 +64,12 @@ export class tvshowComponent implements OnInit {
         })
       }
       this.ratingArray.sort(this.compare);
-      console.log(this.ratingArray)
-
     });
     this.defaultSelected = '';
   }
 
 /** Function to get tiles based on genre**/
   onChange(genre: any) {
-    console.log("genre", genre);
     const selectedGenre = this.resultArray.filter(x => x.genres.includes(genre));
     const genreArray = []
     for (let i = 0; i < selectedGenre.length; i++) {
@@ -92,7 +84,6 @@ export class tvshowComponent implements OnInit {
     }
     this.ratingArray = genreArray;
     this.ratingArray.sort(this.compare);
-    console.log("selectedGenre", selectedGenre);
   }
 
   navigateToDetail(id: any) {
