@@ -1,7 +1,7 @@
 <div class="row headercls">
-  <input type="text" name="search" class="searchcls" [(ngModel)]="searchText" placeholder="Search for shows">
+  <input type="text" name="search" class="searchcls" [(ngModel)]="searchText" placeholder="Search for tv shows">
   <select [(ngModel)]="defaultSelected" class="drpdown" (ngModelChange)="onChange($event)" >
-    <option value="" disabled selected id="option">Select your option</option>
+    <option value="" disabled selected id="option">Select the genre</option>
     <option *ngFor="let i of genres" [ngValue]="i"> {{i}} </option>
   </select>
 </div>
