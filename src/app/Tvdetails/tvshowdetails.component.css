@@ -2,6 +2,7 @@
     padding-right: 225px;
     padding-left: 254px;
     text-align: center;
+    font-style: italic;
 }
 
 .btnclass{
@@ -17,5 +18,13 @@
     justify-content: center
 }
 .namecls{
+    font-weight: bold;
+}
+.langclass{
+    justify-content: center;
+    font-weight: bold;
+}
+.ratingcls{
+    justify-content: center;
     font-weight: bold;
 }

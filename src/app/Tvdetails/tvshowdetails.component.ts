@@ -3,6 +3,7 @@ import { AfterContentInit, Component, ViewChild } from '@angular/core';
 import { tvshowService } from '../services/tvshowservice';
 import { ActivatedRoute } from '@angular/router';
 import { element } from 'protractor';
+import { tick } from '@angular/core/testing';
 @Component({
     selector: 'app-detailshows',
     templateUrl: './tvshowdetails.component.html',
@@ -14,6 +15,8 @@ export class tvshowDetailsComponent implements OnInit {
     public name;
     public summary;
     public img;
+    public rating;
+    public language;
     constructor(private route: ActivatedRoute, private _showService: tvshowService) { }
     ngOnInit() {
         this._showService.tvshowsGet().subscribe((res) => {
@@ -24,6 +27,9 @@ export class tvshowDetailsComponent implements OnInit {
             this.name = data[0].name;
             this.summary = data[0].summary.replace(/(<([^>]+)>)/ig, '');
             this.img = data[0].image.medium;
+            this.rating = data[0].rating.average;
+            this.language = data[0].language;
+            console.log(data)
         })
     }
 }

@@ -1,11 +1,13 @@
 <div class="row btnclass">
-    <button [routerLink]="['']">Back To Home</button>
+    <button [routerLink]="['/Home']">Back To Home</button>
 </div>
 <div class="row imgclass">
     <img [src]="img" alt="Avatar">
 </div>
 
 <div class="row selectedtile">
-    <div class="namecls">{{ name }}</div>
-    <div class="summaryclass">{{ summary }}</div>
+    <div class="namecls">ShowName: {{ name }}</div> 
 </div>
+<div class="row ratingcls">Rating: {{rating}}</div>
+<div class="row langclass">Language: {{language}}</div>
+<div class="row summaryclass">{{ summary }}</div>
